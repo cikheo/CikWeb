@@ -3,3 +3,8 @@ dist/
 .env
 *.local
 *.log
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
