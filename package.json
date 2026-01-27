@@ -1,0 +1,55 @@
+{
+  "name": "CikWeb",
+  "description": "静态多业务个人主页主题",
+  "version": "CIK-GEN.3.0+20260125",
+  "author": {
+    "name": "Cik",
+    "email": "cikheo@qq.com",
+    "url": "https://cikcc.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/cikheo/CikWeb",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cikheo/CikWeb.git"
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite-ssg build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .ts,.vue src",
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "dompurify": "^3.0.0",
+    "element-plus": "^2.3.0",
+    "marked": "^5.0.0",
+    "pinia": "^2.0.0",
+    "vue": "^3.3.0",
+    "vue-router": "^4.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/eslint-config-typescript": "^11.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "husky": "^8.0.0",
+    "prettier": "^2.0.0",
+    "sass": "^1.64.0",
+    "stylelint": "^15.3.0",
+    "stylelint-config-standard": "^31.0.0",
+    "typescript": "5.3.3",
+    "unplugin-auto-import": "^21.0.0",
+    "unplugin-vue-components": "^31.0.0",
+    "vite": "^5.0.0",
+    "vite-ssg": "^28.2.2"
+  }
+}

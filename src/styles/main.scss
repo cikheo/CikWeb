@@ -1,0 +1,79 @@
+/*
+ * @Description: 全局样式入口，定义共享变量、滚动条样式及移动端适配逻辑
+ * @Author: CIK
+ * @Date: 2026-01-26
+ */
+:root {
+	/* 轮播图和展示区使用的共享内容宽度，用于对齐左右边缘 */
+	--content-width: calc(380px * 3 + 3rem * 2);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html { 
+  scroll-behavior: smooth; 
+  -webkit-overflow-scrolling: touch; /* 移动端惯性滚动 */
+}
+
+/* 优化滚动容器高度设置，使用 min-height 避免截断 */
+html, body { height: 100%; }
+#app { min-height: 100%; }
+
+/* 全局自定义滚动条样式，提升视觉丝滑感 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color: #222; background-color: #f8f9fa; }
+
+/* iPad / Tablet & Desktop 统一紧凑间距调整 */
+@media (min-width: 1025px) {
+  /* 优化桌面端间距，让整体结构更紧致 */
+  .showcase,
+  .tools,
+  .media,
+  .links-section,
+  .latest-posts,
+  .sponsors,
+  .projects,
+  section {
+    padding-top: 3.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+  .section-header { margin-bottom: 2rem !important; }
+}
+
+@media (max-width: 1024px) {
+  /* 减少各模块的上下内边距，让模块之间更紧凑 */
+  .showcase,
+  .tools,
+  .media,
+  .links-section,
+  .latest-posts,
+  .sponsors,
+  .projects,
+  section {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* 标题与内容之间的距离进一步压缩 */
+  .section-header { margin-bottom: 0.75rem !important; }
+
+  /* 全局内容容器宽度缩小，配合 2-up 布局 */
+  :root { --content-width: calc(380px * 2 + 1.5rem); }
+}
