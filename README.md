@@ -147,6 +147,11 @@ npm run format
    > **⚠️ 注意**: 分享图片使用绝对路径 `https://cikcc.com/logo.png`，**请确保域名配置正确**。
    - **Logo 配置**: 修改 `public/logo.png` 即可同步更新图标与分享图。
 
+4. **RSS 订阅配置**: 如果您需要展示自己的博客文章，需要修改 RSS 订阅链接：
+   > **⚠️ 注意**: 需要将 RSS 订阅链接改为您自己的博客订阅地址。
+   - **修改路径 1**: `src/pages/Blog.vue` 第 10 行 - 修改 `href="https://blog.cikcc.com/rss.xml"`
+   - **修改路径 2**: `src/components/BlogList.vue` 第 74 行 - 修改 `rssUrl = 'https://blog.cikcc.com/rss.xml'`
+
 ## 🛠 开发规范
 
 为了保持代码的高可维护性与一致性，本项目遵循以下规范：
