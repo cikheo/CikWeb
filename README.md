@@ -144,7 +144,7 @@ npm run format
    error_page 404 /404.html;
    ```
 3. **分享预览**: 已内置 Open Graph、Twitter Card 及微信隐藏图片兜底。分享链接到微信、QQ 或 Twitter 时会自动抓取项目 Logo。
-   - **注意**: 分享图片使用绝对路径 `https://cikcc.com/logo.png`，请确保域名配置正确。
+   > **⚠️ 注意**: 分享图片使用绝对路径 `https://cikcc.com/logo.png`，**请确保域名配置正确**。
    - **Logo 配置**: 修改 `public/logo.png` 即可同步更新图标与分享图。
 
 ## 🛠 开发规范
