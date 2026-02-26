@@ -9,7 +9,7 @@
 - 🎨 **Element Plus**: 优雅的 UI 组件库集成
 - 🍍 **Pinia**: 直观的状态管理方案
 - 📱 **响应式设计**: 完美适配移动端与桌面端，提供极致的跨端体验
-- 📝 **丰富功能**: 内置博客列表、项目轮播、地址栏模拟、多媒体展示、站点状态监控等模块
+- 📝 **丰富功能**: 内置博客列表、项目轮播、地址栏模拟、多媒体展示等模块
 - 🏗 **工程化标准**: 规范的文件注释头、全中文化的代码说明、完善的 ESLint + Prettier 配置
 - 🚀 **SSG 预渲染**: 基于 `vite-ssg` 实现全站静态化，极致的加载速度与 SEO 友好
 - 🔗 **优雅 URL**: 采用 History 模式且无 `.html` 后缀，无需 Nginx 伪静态配置即可直接访问
@@ -26,7 +26,6 @@
 - 🎬 **社交展示**: 社交资源展示专区 (MediaSection)
 - 🔗 **友链朋友圈**: 样式精美的友情链接展示区域
 - 💰 **赞助页面**: 独立的赞助/打赏页面，支持多种方式展示
-- 📊 **站点状态**: 基于 UptimeRobot API 的实时站点监控面板，支持自动刷新与本地缓存
 - ℹ️ **关于与社交**: 个人简介、微信公众号引流及其他社交媒体链接集成
 
 ## 📦 技术栈
@@ -120,7 +119,6 @@ npm run format
 ├── data/            # 静态数据中心 (解耦展示逻辑)
 │   ├── projects.ts         # 项目列表数据
 │   ├── showcase.ts         # 重点展示数据
-│   ├── status.ts           # 站点监控配置 (UptimeRobot API)
 │   └── ...
 ├── pages/           # 页面级组件
 │   ├── Home.vue            # 首页 (HomeView)
@@ -154,10 +152,6 @@ npm run format
    - **修改路径 1**: `src/pages/Blog.vue` 第 10 行 - 修改 `href="https://blog.cikcc.com/rss.xml"`
    - **修改路径 2**: `src/components/BlogList.vue` 第 74 行 - 修改 `rssUrl = 'https://blog.cikcc.com/rss.xml'`
 
-5. **站点状态监控配置**: 如需使用站点状态监控功能,需配置 UptimeRobot API Key:
-   > **⚠️ 注意**: 需要将 API Key 替换为您自己的 UptimeRobot API Key.
-   - **修改路径**: `src/data/status.ts` 第 10 行 - 修改 `apiKey: 'your-api-key-here'`
-
 ## 🛠 开发规范
 
 为了保持代码的高可维护性与一致性，本项目遵循以下规范：
@@ -174,3 +168,13 @@ npm run format
 本项目基于 [MIT](./LICENSE) 许可证开源。
 
 Copyright (c) 2026 [Cik](https://cikcc.com)
+
+## 部署
+
+本项目 CDN 加速及安全防护由 Tencent EdgeOne 赞助：EdgeOne 提供长期有效的免费套餐，包含不限量的流量和请求，覆盖中国大陆节点，且无任何超额收费，感兴趣的朋友可以点击下面的链接领取
+
+[亚洲最佳CDN、边缘和安全解决方案 - Tencent EdgeOne](https://edgeone.ai/zh?from=github)
+
+<img width="200" height="100" alt="34fe3a45-492d-4ea4-ae5d-ea1087ca7b4b" src="https://github.com/user-attachments/assets/6efd253e-fd4b-4d4c-a56f-1e5b5dcee15b" />
+
+[![使用 EdgeOne Pages 部署](https://github.com/user-attachments/assets/b36719ac-a8d7-438a-8cf5-aa06a4603370)](https://edgeone.ai/pages/new?repository-url=https%3A%2F%2Fgithub.com%2Fzhheo%2FHeoWeb)
