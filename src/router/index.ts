@@ -10,6 +10,7 @@ import AboutView from '@/pages/About.vue'
 import Sponsor from '@/pages/Sponsor.vue'
 import Privacy from '@/pages/Privacy.vue'
 import WeChat from '@/pages/WeChat.vue'
+import Status from '@/pages/Status.vue'
 import NotFound from '@/pages/NotFound.vue'
 
 export const routes: Array<RouteRecordRaw> = [
@@ -60,8 +61,16 @@ export const routes: Array<RouteRecordRaw> = [
     meta: {
       title: '微信公众号 - Cik'
     }
-  }
-  ,{ 
+  },
+  { 
+    path: '/status',
+    name: 'Status', 
+    component: Status,
+    meta: {
+      title: '站点状态 - Cik'
+    }
+  },
+  { 
     path: '/:pathMatch(.*)*', 
     name: 'NotFound', 
     component: NotFound,

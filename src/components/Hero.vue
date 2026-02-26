@@ -61,8 +61,8 @@ export default defineComponent({ name: 'AppHero' })
 .hero {
   position: relative;
   overflow: hidden;
-  /* 电脑端设置顶部间距为16rem，确保与导航栏保持固定间隔 */
-  padding: 16rem 1rem 7.5rem;
+  /* 电脑端设置顶部间距为10rem，确保与导航栏保持固定间隔 */
+  padding: 10rem 1rem 7.5rem;
   min-height: 40vh;
   display: flex;
   align-items: center;
@@ -72,32 +72,32 @@ export default defineComponent({ name: 'AppHero' })
   background: rgb(255 252 250 / var(--tw-bg-opacity, 1));
 }
 
-/* 响应式顶部间距：电脑端统一保持16rem间距 */
+/* 响应式顶部间距：电脑端统一保持10rem间距 */
 /* 超大屏幕 (1920px+) */
 @media (min-width: 1920px) {
   .hero {
-    padding-top: 16rem;
+    padding-top: 10rem;
   }
 }
 
 /* 大屏幕 (1440px - 1919px) */
 @media (min-width: 1440px) and (max-width: 1919px) {
   .hero {
-    padding-top: 16rem;
+    padding-top: 10rem;
   }
 }
 
 /* 中等屏幕 (1024px - 1439px) */
 @media (min-width: 1024px) and (max-width: 1439px) {
   .hero {
-    padding-top: 16rem;
+    padding-top: 10rem;
   }
 }
 
 /* 平板横屏 (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .hero {
-    padding-top: 16rem;
+    padding-top: 10rem;
   }
 }
 .hero .inner {

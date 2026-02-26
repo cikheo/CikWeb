@@ -17,5 +17,5 @@ export default defineComponent({ name: 'AboutView' })
 </script>
 
 <style scoped>
-.about-page { padding: 1rem }
+.about-page { padding: 140px 1rem 1rem }
 </style>

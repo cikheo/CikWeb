@@ -9,7 +9,7 @@
 - 🎨 **Element Plus**: 优雅的 UI 组件库集成
 - 🍍 **Pinia**: 直观的状态管理方案
 - 📱 **响应式设计**: 完美适配移动端与桌面端，提供极致的跨端体验
-- 📝 **丰富功能**: 内置博客列表、项目轮播、地址栏模拟、多媒体展示等模块
+- 📝 **丰富功能**: 内置博客列表、项目轮播、地址栏模拟、多媒体展示、站点状态监控等模块
 - 🏗 **工程化标准**: 规范的文件注释头、全中文化的代码说明、完善的 ESLint + Prettier 配置
 - 🚀 **SSG 预渲染**: 基于 `vite-ssg` 实现全站静态化，极致的加载速度与 SEO 友好
 - 🔗 **优雅 URL**: 采用 History 模式且无 `.html` 后缀，无需 Nginx 伪静态配置即可直接访问
@@ -23,9 +23,10 @@
 - 📂 **项目橱窗**: 专注于展示个人开源项目、作品集的展示卡片
 - 📝 **博客集成**: 内置博客列表组件，支持展示最新文章与归档
 - 🧰 **效率工具**: 独立的工具推荐板块，分享常用开发工具与资源
-- 🎬 **多媒体展示**: 视频或媒体资源展示专区 (MediaSection)
+- 🎬 **社交展示**: 社交资源展示专区 (MediaSection)
 - 🔗 **友链朋友圈**: 样式精美的友情链接展示区域
 - 💰 **赞助页面**: 独立的赞助/打赏页面，支持多种方式展示
+- 📊 **站点状态**: 基于 UptimeRobot API 的实时站点监控面板，支持自动刷新与本地缓存
 - ℹ️ **关于与社交**: 个人简介、微信公众号引流及其他社交媒体链接集成
 
 ## 📦 技术栈
@@ -119,6 +120,7 @@ npm run format
 ├── data/            # 静态数据中心 (解耦展示逻辑)
 │   ├── projects.ts         # 项目列表数据
 │   ├── showcase.ts         # 重点展示数据
+│   ├── status.ts           # 站点监控配置 (UptimeRobot API)
 │   └── ...
 ├── pages/           # 页面级组件
 │   ├── Home.vue            # 首页 (HomeView)
@@ -144,8 +146,17 @@ npm run format
    error_page 404 /404.html;
    ```
 3. **分享预览**: 已内置 Open Graph、Twitter Card 及微信隐藏图片兜底。分享链接到微信、QQ 或 Twitter 时会自动抓取项目 Logo。
-   - **注意**: 分享图片使用绝对路径 `https://cikcc.com/logo.png`，请确保域名配置正确。
+   > **⚠️ 注意**: 分享图片使用绝对路径 `https://cikcc.com/logo.png`，**请确保域名配置正确**。
    - **Logo 配置**: 修改 `public/logo.png` 即可同步更新图标与分享图。
+
+4. **RSS 订阅配置**: 如果您需要展示自己的博客文章，需要修改 RSS 订阅链接：
+   > **⚠️ 注意**: 需要将 RSS 订阅链接改为您自己的博客订阅地址。
+   - **修改路径 1**: `src/pages/Blog.vue` 第 10 行 - 修改 `href="https://blog.cikcc.com/rss.xml"`
+   - **修改路径 2**: `src/components/BlogList.vue` 第 74 行 - 修改 `rssUrl = 'https://blog.cikcc.com/rss.xml'`
+
+5. **站点状态监控配置**: 如需使用站点状态监控功能,需配置 UptimeRobot API Key:
+   > **⚠️ 注意**: 需要将 API Key 替换为您自己的 UptimeRobot API Key.
+   - **修改路径**: `src/data/status.ts` 第 10 行 - 修改 `apiKey: 'your-api-key-here'`
 
 ## 🛠 开发规范
 

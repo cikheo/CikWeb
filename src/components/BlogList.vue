@@ -422,15 +422,4 @@ export default defineComponent({
   color: #6b7280;
 }
 
-/* Dark mode tweaks */
-:global(html.theme-dark) .post-card {
-  background: #1e293b;
-  border-color: rgba(255,255,255,0.05);
-}
-
-:global(html.theme-dark) .title { color: #f3f4f6; }
-:global(html.theme-dark) .desc { color: #9ca3af; }
-:global(html.theme-dark) .date { background: rgba(79, 70, 229, 0.2); color: #818cf8; }
-:global(html.theme-dark) .pager-btn { background: #1e293b; color: #e5e7eb; border-color: rgba(255,255,255,0.1); }
-:global(html.theme-dark) .pager-btn:hover:not(:disabled) { background: #4f46e5; }
 </style>

@@ -88,6 +88,7 @@ export default defineConfig({
         '/about/',
         '/privacy/',
         '/wechat/',
+        '/status/',
         '/404'
       ]
     }

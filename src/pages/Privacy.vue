@@ -116,7 +116,7 @@ export default defineComponent({
   
   background-color: var(--bg-color);
   min-height: 100vh;
-  padding-top: 180px;
+  padding-top: 140px;
   padding-bottom: 6rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }

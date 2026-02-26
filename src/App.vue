@@ -20,7 +20,10 @@ import HeaderNav from '@/components/HeaderNav.vue'
 import SiteFooter from '@/components/Footer.vue'
 import BackToTop from '@/components/BackToTop.vue'
 
-export default defineComponent({ name: 'App', components: { HeaderNav, SiteFooter, BackToTop } })
+export default defineComponent({ 
+  name: 'App', 
+  components: { HeaderNav, SiteFooter, BackToTop }
+})
 </script>
 
 <style>

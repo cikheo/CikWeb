@@ -28,7 +28,7 @@ export default defineComponent({ name: 'BlogView', components: { BlogList } })
 
 <style scoped>
 .blog-page {
-  padding: 120px 20px 40px;
+  padding: 140px 20px 40px;
   width: 100%;
   max-width: var(--content-width);
   margin: 0 auto;

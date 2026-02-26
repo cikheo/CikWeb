@@ -170,7 +170,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .sponsor-page {
   min-height: 80vh;
-  padding: 4rem 1rem;
+  padding: 140px 1rem 4rem;
   /* 加深背景色，使用更明显的暖粉色渐变 */
   background: linear-gradient(180deg, #ffe6e9 0%, #fff 100%);
   display: flex;

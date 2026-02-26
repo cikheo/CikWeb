@@ -68,7 +68,7 @@
  * @Author: CIK
  * @Date: 2026-01-26
  */
-import { defineComponent, onMounted, onUnmounted, computed, ref, watch } from 'vue'
+import { defineComponent, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
 export default defineComponent({
@@ -459,8 +459,6 @@ export default defineComponent({
   }
  
   .brand-img { width: 42px; height: 42px; } /* 恢复头像大小 */
-  .actions :deep(.theme-toggle) { width: 32px; height: 32px; font-size: 1rem; }
-
   /* 问候气泡样式 */
   .greeting-bubble {
     position: absolute;

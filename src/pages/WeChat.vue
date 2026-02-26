@@ -110,7 +110,7 @@ const benefits = [
   justify-content: center;
   align-items: center;
   background: var(--bg-gradient);
-  padding: 60px 20px;
+  padding: 140px 20px 60px;
   overflow: hidden;
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
