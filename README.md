@@ -136,13 +136,71 @@ npm run format
 
 ## 🌐 部署说明
 
-本项目打包后为纯静态文件，支持零配置部署到任何 Web 服务器：
+本项目打包后为纯静态文件，支持零配置部署到任何 Web 服务器。
+
+### 方式一：腾讯云 EdgeOne Pages 部署（推荐）
+
+EdgeOne Pages 是腾讯云提供的静态网站托管服务，支持从 Git 仓库自动部署，并提供全球 CDN 加速。
+
+#### 1. 准备工作
+
+- 注册腾讯云账号：https://cloud.tencent.com/
+- 开通 EdgeOne Pages 服务：https://console.cloud.tencent.com/edgeone/pages
+- 将项目推送到 GitHub（已完成）
+
+#### 2. 创建项目
+
+1. 登录 EdgeOne Pages 控制台
+2. 点击「创建项目」
+3. 选择「从 Git 导入」
+4. 授权并选择仓库：`cikheo/CikWeb`
+
+#### 3. 配置构建参数
+
+```yaml
+框架预设: Vite
+构建命令: npm run build
+输出目录: dist
+Node.js 版本: 18.x 或更高
+```
+
+#### 4. 部署
+
+点击「部署」按钮，等待 2-3 分钟完成部署。
+
+部署成功后，您将获得一个 EdgeOne 域名（例如：`https://your-project.edgeone.cool`）。
+
+#### 5. 自动部署
+
+EdgeOne Pages 支持 Git 推送自动部署：
+- 在控制台配置自动部署
+- 每次推送代码自动触发构建
+- 自动部署到生产环境
+
+#### 6. 自定义域名（可选）
+
+在 EdgeOne Pages 控制台中可以绑定您自己的域名。
+
+**优势：**
+- ✅ **极速访问**：国内 CDN 节点，响应时间 < 100ms
+- ✅ **自动部署**：Git 推送自动触发构建
+- ✅ **免费额度**：100 GB/月 流量 + 1000 万次/月 请求
+- ✅ **HTTPS 支持**：自动配置 SSL 证书
+
+---
+
+### 方式二：Nginx 传统部署
 
 1. **Nginx**: 直接将 `dist` 目录内容上传至 `root` 目录即可。由于采用了预渲染文件夹模式，访问 `/wechat` 会自动寻址到 `/wechat/index.html`。
 2. **404 页面**: 如果您在 Nginx 中希望路径错误时跳转到项目自定义 404 页，建议添加：
    ```nginx
    error_page 404 /404.html;
    ```
+
+---
+
+### 配置说明
+
 3. **分享预览**: 已内置 Open Graph、Twitter Card 及微信隐藏图片兜底。分享链接到微信、QQ 或 Twitter 时会自动抓取项目 Logo。
    > **⚠️ 注意**: 分享图片使用绝对路径 `https://cikcc.com/logo.png`，**请确保域名配置正确**。
    - **Logo 配置**: 修改 `public/logo.png` 即可同步更新图标与分享图。
@@ -168,8 +226,6 @@ npm run format
 本项目基于 [MIT](./LICENSE) 许可证开源。
 
 Copyright (c) 2026 [Cik](https://cikcc.com)
-
-## 部署
 
 本项目 CDN 加速及安全防护由 Tencent EdgeOne 赞助：EdgeOne 提供长期有效的免费套餐，包含不限量的流量和请求，覆盖中国大陆节点，且无任何超额收费，感兴趣的朋友可以点击下面的链接领取
 
