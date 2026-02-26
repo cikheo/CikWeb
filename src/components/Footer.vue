@@ -59,17 +59,6 @@
           <a :href="icpUrl" target="_blank" rel="noopener">{{ icp }}</a>
         </p>
         <div class="links">
-          <router-link 
-            to="/status" 
-            class="status-link"
-            :title="statusStore.formattedLastUpdated || '状态未知'"
-          >
-            <span 
-              class="status-dot" 
-              :class="statusStore.overallStatus"
-            ></span>
-            站点状态
-          </router-link>
           <router-link to="/privacy" class="privacy-link">隐私政策</router-link>
         </div>
       </div>
@@ -85,7 +74,6 @@
  */
 import { defineComponent, ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { useStatusStore } from '@/stores/status'
 
 export default defineComponent({
   name: 'SiteFooter',
@@ -97,9 +85,7 @@ export default defineComponent({
     const route = useRoute()
     const isSponsorPage = computed(() => route.path === '/sponsor')
     
-    const statusStore = useStatusStore()
-    
-    return { year, icp, icpUrl, isSponsorPage, statusStore }
+    return { year, icp, icpUrl, isSponsorPage }
   }
 })
 </script>
@@ -275,7 +261,7 @@ export default defineComponent({
   justify-content: flex-start;
 }
 
-.copyright a, .privacy-link, .status-link {
+.copyright a, .privacy-link {
   color: inherit;
   text-decoration: none;
   transition: color 0.2s;
@@ -286,49 +272,8 @@ export default defineComponent({
   gap: 1.5rem;
 }
 
-.copyright a:hover, .privacy-link:hover, .status-link:hover {
+.copyright a:hover, .privacy-link:hover {
   color: #111827; /* Gray-900 */
-}
-
-/* 站点状态指示点 */
-.status-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  display: inline-block;
-  transition: all 0.3s ease;
-}
-
-.status-dot.unknown {
-  background-color: #9ca3af;
-}
-
-.status-dot.up {
-  background-color: #10b981;
-  box-shadow: 0 0 6px rgba(16, 185, 129, 0.5);
-}
-
-.status-dot.down {
-  background-color: #ef4444;
-  box-shadow: 0 0 6px rgba(239, 68, 68, 0.5);
-  animation: pulse-red 2s ease-in-out infinite;
-}
-
-@keyframes pulse-red {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.7;
-    transform: scale(1.1);
-  }
 }
 
 .made-with {
