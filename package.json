@@ -1,7 +1,7 @@
 {
   "name": "CikWeb",
   "description": "静态多业务个人主页主题",
-  "version": "CIK-GEN.3.0+20260125",
+  "version": "CIK-GEN.3.2+20260227",
   "author": {
     "name": "Cik",
     "email": "cikheo@qq.com",
@@ -56,3 +56,4 @@
     "vite-ssg": "^28.2.2"
   }
 }
+
