@@ -3,10 +3,10 @@
  * @Author: CIK
  * @Date: 2026-01-26
  */
-import img1 from '@/assets/img/cikblogCik!cover.webp'
-import img2 from '@/assets/img/ciknav-Cik!cover.webp'
-import img3 from '@/assets/img/cover!.webp'
-import img4 from '@/assets/img/ciktabCik!cover.webp'
+import img1 from '@/assets/img/cikblogCik-cover.webp'
+import img2 from '@/assets/img/ciknav-cik-cover.webp'
+import img3 from '@/assets/img/cover.webp'
+import img4 from '@/assets/img/ciktabCik-cover.webp'
 
 const projects = [
   {

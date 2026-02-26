@@ -3,8 +3,8 @@
  * @Author: CIK
  * @Date: 2026-01-26
  */
-import img1 from '@/assets/img/cikblogCik!cover.webp'
-import img2 from '@/assets/img/ciktabCik!cover.webp'
+import img1 from '@/assets/img/cikblogCik-cover.webp'
+import img2 from '@/assets/img/ciktabCik-cover.webp'
 
 export const showcase1 = {
   id: 'show-1',
