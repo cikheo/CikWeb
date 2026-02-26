@@ -11,8 +11,10 @@ export const uptimeRobotConfig = {
   
   // API 端点地址
   // 直连模式（会有跨域问题）：https://api.uptimerobot.com/v2/getMonitors
-  // CORS 代理模式（推荐）：使用 Cloudflare Worker 代理
-  apiUrl: 'https://uptime.cikheo.workers.dev/',
+  // Cloudflare Worker 代理：https://uptime.cikheo.workers.dev/
+  // 腾讯云 EdgeOne 边缘函数（推荐，国内访问快）：
+  apiUrl: 'https://your-domain.edgeone.app/api/monitors',
+  // 部署 EdgeOne Pages 后，将上面的 URL 替换为你的实际域名
   
   // 请求超时时间（毫秒）
   timeout: 10000,
