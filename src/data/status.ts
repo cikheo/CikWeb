@@ -10,13 +10,15 @@ export const uptimeRobotConfig = {
   apiKey: 'ur3257177-f4dc46bca49d4ede174ebc30',
   
   // API 端点地址
-  apiUrl: 'https://api.uptimerobot.com/v2/getMonitors',
+  // 直连模式（会有跨域问题）：https://api.uptimerobot.com/v2/getMonitors
+  // CORS 代理模式（推荐）：使用 Cloudflare Worker 代理
+  apiUrl: 'https://uptime.cikheo.workers.dev/',
   
   // 请求超时时间（毫秒）
-  timeout: 5000,
+  timeout: 10000,
   
   // 是否使用代理（用于标识）
-  useProxy: false,
+  useProxy: true,
 };
 
 // API 请求参数优化配置
