@@ -1,7 +1,7 @@
 <template>
   <section class="blog-page">
     <div class="blog-header">
-       <img src="@/assets/img/wzbj-cik!cover.webp" alt="Blog Banner" />
+       <img src="@/assets/img/wzbj-cik-cover.webp" alt="Blog Banner" />
        <div class="header-content">
          <div class="header-text">
            <h1>最新订阅文章</h1>
